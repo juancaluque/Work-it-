@@ -7,16 +7,38 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class WorkOutVC: UIViewController {
 
     // OUTLETS
     @IBOutlet weak var tableView: UITableView!
     
+    // VARIBLES
+    var imagesUrlArray : [String] = ["https://live.staticflickr.com/718/21492946401_5204cf07d4_z_d.jpg", "https://live.staticflickr.com/3708/9630224670_1ba1ac7887_d.jpg"]
+    var imagesArray = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    // FUNC
+    
+    func retrieveImages(completion: @escaping (_ success: Bool)-> ()) {
+        for url in imagesUrlArray {
+            Alamofire.request(url).responseImage { (response) in
+                guard let image = response.result.value else { return }
+                self.imagesArray.append(image)
+                completion(true)
+            }
+        }
+        
+        
+        
+        
     }
 
 
@@ -37,6 +59,10 @@ extension WorkOutVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCell") as? TypeCell else {  return 0 }
         let numberOfTypes = cell.typeOfWorkOut.count
         return numberOfTypes
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
     }
     
 }

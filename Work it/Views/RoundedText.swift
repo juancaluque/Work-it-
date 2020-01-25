@@ -1,15 +1,15 @@
 //
-//  RoundedButton.swift
+//  RoundedText.swift
 //  Work it
 //
-//  Created by Juan Luque on 1/24/20.
+//  Created by Juan Luque on 1/25/20.
 //  Copyright © 2020 Juan Luque. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
-class RoundedButton: UIButton {
+class RoundedText: UITextView {
 
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
@@ -17,14 +17,13 @@ class RoundedButton: UIButton {
     }
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         setupView()
     }
     
     
     func setupView() {
         self.layer.cornerRadius = 20
-        self.titleLabel?.numberOfLines = 2
-        self.titleLabel?.textAlignment = .center
     }
 
 }
