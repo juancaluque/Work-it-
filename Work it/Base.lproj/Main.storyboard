@@ -17,10 +17,10 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="30" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YRj-dQ-fzf">
                                 <rect key="frame" x="0.0" y="226.5" width="414" height="635.5"/>
-                                <color key="backgroundColor" red="0.81636881829999997" green="0.64268178090000005" blue="0.36109664330000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="sectionIndexBackgroundColor" red="0.81636881829999997" green="0.64268178090000005" blue="0.36109664330000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.81636881829999997" green="0.72512602159999995" blue="0.13327400380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.81636881829999997" green="0.72512602159999995" blue="0.13327400380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TypeCell" rowHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="3hB-I8-5wu" customClass="TypeCell" customModule="Work_it" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TypeCell" rowHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="3hB-I8-5wu" customClass="TypeCell" customModule="Work_it" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3hB-I8-5wu" id="VMl-5G-DXU">
@@ -42,7 +42,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="SGu-dD-JbG" secondAttribute="trailing" constant="8" id="dQy-s8-N3e"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.81636881829999997" green="0.64268178090000005" blue="0.36109664330000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.81568627450980391" green="0.72549019607843135" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="typeLbl" destination="SGu-dD-JbG" id="HKK-ZM-YbP"/>
                                         </connections>
@@ -65,7 +65,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.81636881828308105" green="0.64268178091363792" blue="0.36109664326922547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.81568627450980391" green="0.72549019607843135" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="gWI-J6-Kaa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6fH-OC-Wbb"/>
                             <constraint firstItem="YRj-dQ-fzf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rtr-aD-lE2"/>
@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--ExcerciseVC-->
         <scene sceneID="EMr-lj-XVb">
             <objects>
-                <viewController id="EYY-h2-FXo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExcerciseVC" id="EYY-h2-FXo" customClass="ExcerciseVC" customModule="Work_it" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pta-Yb-vKt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,52 +102,59 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="y5v-he-Gxz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="58"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.81636881829999997" green="0.72512602159999995" blue="0.13327400380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark13" translatesAutoresizingMaskIntoConstraints="NO" id="QGf-TB-bge">
                                         <rect key="frame" x="35" y="78.5" width="100" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RRV-Oc-gMg">
-                                <rect key="frame" x="29.5" y="262.5" width="355" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="RRV-Oc-gMg">
+                                <rect key="frame" x="20" y="262.5" width="374" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-aq-hRP" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="70"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-aq-hRP" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="115" id="26Y-4d-XGb"/>
                                             <constraint firstAttribute="height" constant="70" id="Z55-br-cFg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="32"/>
                                         <state key="normal" title="Push Ups">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn1WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="0XX-64-jcw"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkB-PS-1tw" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="0.0" width="115" height="70"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkB-PS-1tw" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                        <rect key="frame" x="126.5" y="0.0" width="121" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="115" id="6Ti-4g-9WC"/>
                                             <constraint firstAttribute="height" constant="70" id="DeK-vD-fYU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                         <state key="normal" title="Front Lifting">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn2WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="H0K-VH-jtU"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1A-24-nGO" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
-                                        <rect key="frame" x="240" y="0.0" width="115" height="70"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1A-24-nGO" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                        <rect key="frame" x="252.5" y="0.0" width="121.5" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="115" id="9wh-Jp-6Fw"/>
                                             <constraint firstAttribute="height" constant="70" id="Igp-MV-0cs"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="28"/>
                                         <state key="normal" title="High Push Ups">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn3WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="1wB-hF-tBg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -158,7 +165,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="3xs-ON-fT0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="58"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.81636881829999997" green="0.72512602159999995" blue="0.13327400380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Sg3-He-m67" customClass="RoundedText" customModule="Work_it" customModuleProvider="target">
@@ -173,35 +180,44 @@
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fl-ap-d5t" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
-                                <rect key="frame" x="149.5" y="676" width="115" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fl-ap-d5t" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                <rect key="frame" x="100" y="676" width="214" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="115" id="H3S-mH-0GS"/>
                                     <constraint firstAttribute="height" constant="70" id="nXe-nw-a3I"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="39"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wXF-1M-BEM" firstAttribute="top" secondItem="RRV-Oc-gMg" secondAttribute="bottom" constant="80" id="5H3-AZ-bnr"/>
                             <constraint firstItem="LaZ-Yh-uwJ" firstAttribute="centerX" secondItem="Pta-Yb-vKt" secondAttribute="centerX" id="9Qc-ah-fJF"/>
                             <constraint firstItem="Sg3-He-m67" firstAttribute="centerX" secondItem="Pta-Yb-vKt" secondAttribute="centerX" id="C2f-st-f06"/>
+                            <constraint firstItem="ig7-mx-F5h" firstAttribute="trailing" secondItem="9fl-ap-d5t" secondAttribute="trailing" constant="100" id="O9I-j5-yi4"/>
                             <constraint firstItem="RRV-Oc-gMg" firstAttribute="centerX" secondItem="Pta-Yb-vKt" secondAttribute="centerX" id="Tzp-Mo-2Qs"/>
                             <constraint firstItem="9fl-ap-d5t" firstAttribute="centerX" secondItem="Pta-Yb-vKt" secondAttribute="centerX" id="UJG-3e-4SM"/>
                             <constraint firstItem="wXF-1M-BEM" firstAttribute="centerX" secondItem="Pta-Yb-vKt" secondAttribute="centerX" id="UQU-eP-KhR"/>
                             <constraint firstItem="RRV-Oc-gMg" firstAttribute="top" secondItem="LaZ-Yh-uwJ" secondAttribute="bottom" constant="20" id="WqJ-mP-paY"/>
                             <constraint firstItem="9fl-ap-d5t" firstAttribute="top" secondItem="Sg3-He-m67" secondAttribute="bottom" constant="15" id="XAc-LC-WmP"/>
+                            <constraint firstItem="RRV-Oc-gMg" firstAttribute="leading" secondItem="ig7-mx-F5h" secondAttribute="leading" constant="20" id="XSG-xf-9Ac"/>
                             <constraint firstItem="Sg3-He-m67" firstAttribute="centerX" secondItem="Pta-Yb-vKt" secondAttribute="centerX" id="eSs-kX-lUk"/>
+                            <constraint firstItem="ig7-mx-F5h" firstAttribute="trailing" secondItem="RRV-Oc-gMg" secondAttribute="trailing" constant="20" id="khP-Mk-DJp"/>
                             <constraint firstItem="Sg3-He-m67" firstAttribute="top" secondItem="wXF-1M-BEM" secondAttribute="bottom" constant="20" id="nFn-Ik-UwT"/>
                             <constraint firstItem="LaZ-Yh-uwJ" firstAttribute="top" secondItem="ig7-mx-F5h" secondAttribute="top" constant="20" id="te5-zO-uts"/>
+                            <constraint firstItem="9fl-ap-d5t" firstAttribute="leading" secondItem="ig7-mx-F5h" secondAttribute="leading" constant="100" id="vKR-zc-47m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ig7-mx-F5h"/>
                     </view>
+                    <connections>
+                        <outlet property="btn1" destination="VRL-aq-hRP" id="aXs-nB-ltN"/>
+                        <outlet property="btn2" destination="FkB-PS-1tw" id="lo1-gP-gEc"/>
+                        <outlet property="btn3" destination="b1A-24-nGO" id="z9m-2e-Anz"/>
+                        <outlet property="titleLbl" destination="D9e-Gw-jsJ" id="PsU-zG-tZQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poM-B6-ISx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

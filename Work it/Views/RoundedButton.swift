@@ -25,6 +25,10 @@ class RoundedButton: UIButton {
         self.layer.cornerRadius = 20
         self.titleLabel?.numberOfLines = 2
         self.titleLabel?.textAlignment = .center
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.titleLabel?.minimumScaleFactor = 0.5
+        
+        
     }
 
 }

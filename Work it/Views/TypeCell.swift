@@ -13,7 +13,7 @@ class TypeCell: UITableViewCell {
     // OUTLETS
     @IBOutlet weak var typeLbl: UILabel!
     
-    let typeOfWorkOut: [String] = [workOut.Chest.rawValue, workOut.Back.rawValue, workOut.Legs.rawValue, workOut.Bicep.rawValue, workOut.Tricep.rawValue, workOut.Abs.rawValue]
+    let typeOfWorkOut = ["Chest", "Back", "Legs", "Bicep", "Tricep", "Abs"]
     
     func configureCell(name: String) {
         typeLbl.text = name 

@@ -20,6 +20,9 @@
 		A4AA6EAC23DCA1820096D1AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA6EAB23DCA1820096D1AB /* Constants.swift */; };
 		A4AA6EB123DCAE8F0096D1AB /* RoundedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA6EB023DCAE8F0096D1AB /* RoundedText.swift */; };
 		A4AA6EB323DCB17C0096D1AB /* WorkOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA6EB223DCB17C0096D1AB /* WorkOutVC.swift */; };
+		A4AA6EB523DCB3B90096D1AB /* ExcerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA6EB423DCB3B90096D1AB /* ExcerciseVC.swift */; };
+		A4AA6EB723DCF3920096D1AB /* ExcerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA6EB623DCF3920096D1AB /* ExcerciseType.swift */; };
+		A4AA6EBC23DCF4F30096D1AB /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA6EBB23DCF4F30096D1AB /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		A4AA6EAB23DCA1820096D1AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A4AA6EB023DCAE8F0096D1AB /* RoundedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedText.swift; sourceTree = "<group>"; };
 		A4AA6EB223DCB17C0096D1AB /* WorkOutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOutVC.swift; sourceTree = "<group>"; };
+		A4AA6EB423DCB3B90096D1AB /* ExcerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseVC.swift; sourceTree = "<group>"; };
+		A4AA6EB623DCF3920096D1AB /* ExcerciseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseType.swift; sourceTree = "<group>"; };
+		A4AA6EBB23DCF4F30096D1AB /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		EF51A520E00EAF48C016EBD5 /* Pods-Work it.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Work it.release.xcconfig"; path = "Pods/Target Support Files/Pods-Work it/Pods-Work it.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +81,7 @@
 		A44A088E23DBF83600222C33 /* Work it */ = {
 			isa = PBXGroup;
 			children = (
+				A4AA6EB823DCF4BB0096D1AB /* Extensions */,
 				A4AA6EAD23DCA46B0096D1AB /* Services */,
 				A4AA6EAA23DCA1730096D1AB /* Utilities  */,
 				A44A08A723DBFC3F00222C33 /* Model */,
@@ -94,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AA6EB223DCB17C0096D1AB /* WorkOutVC.swift */,
+				A4AA6EB423DCB3B90096D1AB /* ExcerciseVC.swift */,
 			);
 			path = "Controller ";
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AA6EAB23DCA1820096D1AB /* Constants.swift */,
+				A4AA6EB623DCF3920096D1AB /* ExcerciseType.swift */,
 			);
 			path = "Utilities ";
 			sourceTree = "<group>";
@@ -130,6 +139,14 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A4AA6EB823DCF4BB0096D1AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA6EBB23DCF4F30096D1AB /* File.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D30E5F3DFFAE2B40F25E0096 /* Pods */ = {
@@ -264,9 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44A08A923DBFC4C00222C33 /* workOut.swift in Sources */,
+				A4AA6EBC23DCF4F30096D1AB /* File.swift in Sources */,
 				A44A08AD23DC042600222C33 /* RoundedLabel.swift in Sources */,
 				A44A089023DBF83600222C33 /* AppDelegate.swift in Sources */,
+				A4AA6EB523DCB3B90096D1AB /* ExcerciseVC.swift in Sources */,
 				A4AA6EB123DCAE8F0096D1AB /* RoundedText.swift in Sources */,
+				A4AA6EB723DCF3920096D1AB /* ExcerciseType.swift in Sources */,
 				A44A08AF23DC04EC00222C33 /* RoundedButton.swift in Sources */,
 				A44A089223DBF83600222C33 /* SceneDelegate.swift in Sources */,
 				A44A08A623DBFB9900222C33 /* TypeCell.swift in Sources */,
