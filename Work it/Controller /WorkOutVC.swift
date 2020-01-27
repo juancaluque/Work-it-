@@ -58,11 +58,12 @@ extension WorkOutVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCell") as? TypeCell else { return }
-        let cellTitle = cell.typeOfWorkOut[indexPath.row] 
+        let cellTitle = cell.typeOfWorkOut[indexPath.row]
+        Muscle.instance.title = cellTitle
         
         guard let excerciseVC = storyboard?.instantiateViewController(identifier: "ExcerciseVC") as? ExcerciseVC else { return }
         
-        excerciseVC.initData(title: cellTitle)
+        excerciseVC.initData(title: Muscle.instance.title!)
         
         present(excerciseVC, animated: true, completion: nil)
     }

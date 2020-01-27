@@ -23,6 +23,8 @@ class RoundedLabel: UILabel {
     func setupView() {
         self.layer.cornerRadius = 20
         self.layer.masksToBounds = true
+        self.numberOfLines = 0
+        self.lineBreakMode = .byWordWrapping
     }
 
 }

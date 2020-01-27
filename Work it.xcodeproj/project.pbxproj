@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2EDA1AFE6BB20EA5E26A618E /* Pods_Work_it.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C74F937F9C1417FB87ECB35 /* Pods_Work_it.framework */; };
+		A43F71AC23DE574C00B09095 /* Excercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F71AB23DE574C00B09095 /* Excercise.swift */; };
+		A43F71AE23DE59AA00B09095 /* GeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F71AD23DE59AA00B09095 /* GeneratorVC.swift */; };
+		A43F71B023DE5D5A00B09095 /* Muscle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F71AF23DE5D5A00B09095 /* Muscle.swift */; };
+		A43F71B223DE6B2200B09095 /* UILabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F71B123DE6B2200B09095 /* UILabelExt.swift */; };
 		A44A089023DBF83600222C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A088F23DBF83600222C33 /* AppDelegate.swift */; };
 		A44A089223DBF83600222C33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A089123DBF83600222C33 /* SceneDelegate.swift */; };
 		A44A089723DBF83600222C33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44A089523DBF83600222C33 /* Main.storyboard */; };
@@ -28,6 +32,10 @@
 /* Begin PBXFileReference section */
 		2EEBB7CF43BBAC000BEB7705 /* Pods-Work it.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Work it.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Work it/Pods-Work it.debug.xcconfig"; sourceTree = "<group>"; };
 		8C74F937F9C1417FB87ECB35 /* Pods_Work_it.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Work_it.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A43F71AB23DE574C00B09095 /* Excercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excercise.swift; sourceTree = "<group>"; };
+		A43F71AD23DE59AA00B09095 /* GeneratorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorVC.swift; sourceTree = "<group>"; };
+		A43F71AF23DE5D5A00B09095 /* Muscle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muscle.swift; sourceTree = "<group>"; };
+		A43F71B123DE6B2200B09095 /* UILabelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExt.swift; sourceTree = "<group>"; };
 		A44A088C23DBF83600222C33 /* Work it.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Work it.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44A088F23DBF83600222C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A44A089123DBF83600222C33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +110,7 @@
 			children = (
 				A4AA6EB223DCB17C0096D1AB /* WorkOutVC.swift */,
 				A4AA6EB423DCB3B90096D1AB /* ExcerciseVC.swift */,
+				A43F71AD23DE59AA00B09095 /* GeneratorVC.swift */,
 			);
 			path = "Controller ";
 			sourceTree = "<group>";
@@ -113,6 +122,7 @@
 				A44A08AC23DC042600222C33 /* RoundedLabel.swift */,
 				A44A08AE23DC04EC00222C33 /* RoundedButton.swift */,
 				A4AA6EB023DCAE8F0096D1AB /* RoundedText.swift */,
+				A43F71B123DE6B2200B09095 /* UILabelExt.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				A44A08A823DBFC4C00222C33 /* workOut.swift */,
+				A43F71AB23DE574C00B09095 /* Excercise.swift */,
+				A43F71AF23DE5D5A00B09095 /* Muscle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,14 +294,18 @@
 			files = (
 				A44A08A923DBFC4C00222C33 /* workOut.swift in Sources */,
 				A4AA6EBC23DCF4F30096D1AB /* File.swift in Sources */,
+				A43F71AE23DE59AA00B09095 /* GeneratorVC.swift in Sources */,
+				A43F71B023DE5D5A00B09095 /* Muscle.swift in Sources */,
 				A44A08AD23DC042600222C33 /* RoundedLabel.swift in Sources */,
 				A44A089023DBF83600222C33 /* AppDelegate.swift in Sources */,
 				A4AA6EB523DCB3B90096D1AB /* ExcerciseVC.swift in Sources */,
 				A4AA6EB123DCAE8F0096D1AB /* RoundedText.swift in Sources */,
 				A4AA6EB723DCF3920096D1AB /* ExcerciseType.swift in Sources */,
 				A44A08AF23DC04EC00222C33 /* RoundedButton.swift in Sources */,
+				A43F71B223DE6B2200B09095 /* UILabelExt.swift in Sources */,
 				A44A089223DBF83600222C33 /* SceneDelegate.swift in Sources */,
 				A44A08A623DBFB9900222C33 /* TypeCell.swift in Sources */,
+				A43F71AC23DE574C00B09095 /* Excercise.swift in Sources */,
 				A4AA6EB323DCB17C0096D1AB /* WorkOutVC.swift in Sources */,
 				A4AA6EAC23DCA1820096D1AB /* Constants.swift in Sources */,
 			);

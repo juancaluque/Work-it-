@@ -18,28 +18,42 @@ class ExcerciseVC: UIViewController {
     
     // @IBACTION
     @IBAction func btn1WasPressed(_ sender: Any) {
-        typeOfExcercise = .type1
+        let nameOfExcercise = btn1.titleLabel?.text
+        Excercise.instance.typeOfExcercise = nameOfExcercise
         btn1.setSelected()
         btn2.setDeselected()
         btn3.setDeselected()
         
     }
     @IBAction func btn2WasPressed(_ sender: Any) {
-        typeOfExcercise = .type2
+        let nameOfExcercise = btn2.titleLabel?.text
+        Excercise.instance.typeOfExcercise = nameOfExcercise
         btn1.setDeselected()
         btn2.setSelected()
         btn3.setDeselected()
     }
     @IBAction func btn3WasPressed(_ sender: Any) {
-        typeOfExcercise = .type3
+        let nameOfExcercise = btn3.titleLabel?.text
+        Excercise.instance.typeOfExcercise = nameOfExcercise
         btn1.setDeselected()
         btn2.setDeselected()
         btn3.setSelected()
     }
+    @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func confirmBtnPressed(_ sender: Any) {
+        
+        guard let generatorVC = storyboard?.instantiateViewController(identifier: "GeneratorVC") as? GeneratorVC else { return }
+        
+        generatorVC.initData(muscle: Muscle.instance.title!, excercise: Excercise.instance.typeOfExcercise)
+        
+        present(generatorVC, animated: true, completion: nil)
+    }
     
     // VARIABLES
     var titleOfLbl: String = ""
-    var typeOfExcercise: ExcerciseType = .type1
+    var typeOfExcercise = Excercise()
     var button1Type: String = ""
     var button2Type: String = ""
     var button3Type: String = ""
@@ -49,6 +63,8 @@ class ExcerciseVC: UIViewController {
     let absExcercises = ["Leg Raise", "Abs Crunch", "Plank"]
     let bicepExcercises = ["Pull Ups", "Dumbbell", "Bar Lifting"]
     let tricepExcercises = ["Diamond Push Ups", "Tricep Push Ups", "Dumbbell"]
+    
+    
     
     // LIFECYCLES
     override func viewDidLoad() {
@@ -61,7 +77,6 @@ class ExcerciseVC: UIViewController {
         btn1.setDeselected()
         btn2.setDeselected()
         btn3.setDeselected()
-        
     }
     
     
