@@ -18,51 +18,76 @@ class ExcerciseVC: UIViewController {
     
     // @IBACTION
     @IBAction func btn1WasPressed(_ sender: Any) {
-        let nameOfExcercise = btn1.titleLabel?.text
-        Excercise.instance.typeOfExcercise = nameOfExcercise
-        btn1.setSelected()
-        btn2.setDeselected()
-        btn3.setDeselected()
-        
+        if Excercise.instance.typeOfExcercise == btn1.titleLabel?.text{
+            btn1.setDeselected()
+            excerciseSelected = false
+        } else {
+            let nameOfExcercise = btn1.titleLabel?.text
+            Excercise.instance.typeOfExcercise = nameOfExcercise
+            btn1.setSelected()
+            btn2.setDeselected()
+            btn3.setDeselected()
+            
+            excerciseSelected = true
+        }
     }
     @IBAction func btn2WasPressed(_ sender: Any) {
-        let nameOfExcercise = btn2.titleLabel?.text
-        Excercise.instance.typeOfExcercise = nameOfExcercise
-        btn1.setDeselected()
-        btn2.setSelected()
-        btn3.setDeselected()
+        if Excercise.instance.typeOfExcercise == btn2.titleLabel?.text {
+            btn2.setDeselected()
+            excerciseSelected = false
+        } else {
+             let nameOfExcercise = btn2.titleLabel?.text
+             Excercise.instance.typeOfExcercise = nameOfExcercise
+             btn1.setDeselected()
+             btn2.setSelected()
+             btn3.setDeselected()
+             
+             excerciseSelected = true
+        }
     }
     @IBAction func btn3WasPressed(_ sender: Any) {
-        let nameOfExcercise = btn3.titleLabel?.text
-        Excercise.instance.typeOfExcercise = nameOfExcercise
-        btn1.setDeselected()
-        btn2.setDeselected()
-        btn3.setSelected()
+        if Excercise.instance.typeOfExcercise == btn3.titleLabel?.text {
+            btn3.setDeselected()
+            excerciseSelected = false
+        } else {
+            let nameOfExcercise = btn3.titleLabel?.text
+            Excercise.instance.typeOfExcercise = nameOfExcercise
+            btn1.setDeselected()
+            btn2.setDeselected()
+            btn3.setSelected()
+            
+            excerciseSelected = true
+        }
     }
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func confirmBtnPressed(_ sender: Any) {
-        
-        guard let generatorVC = storyboard?.instantiateViewController(identifier: "GeneratorVC") as? GeneratorVC else { return }
-        
-        generatorVC.initData(muscle: Muscle.instance.title!, excercise: Excercise.instance.typeOfExcercise)
-        
-        present(generatorVC, animated: true, completion: nil)
+        if excerciseSelected == false {
+            guard let challengeVC = storyboard?.instantiateViewController(identifier: "ChallengeVC") as? ChallengeVC else { return }
+            present(challengeVC, animated: true, completion: nil)
+        } else {
+            guard let generatorVC = storyboard?.instantiateViewController(identifier: "GeneratorVC") as? GeneratorVC else { return }
+            
+            generatorVC.initData(muscle: Muscle.instance.title!, excercise: Excercise.instance.typeOfExcercise)
+            
+            present(generatorVC, animated: true, completion: nil)
+        }
     }
     
     // VARIABLES
     var titleOfLbl: String = ""
     var typeOfExcercise = Excercise()
+    var excerciseSelected: Bool?
     var button1Type: String = ""
     var button2Type: String = ""
     var button3Type: String = ""
     let chestExcercises = ["Push Ups", "Front Lifting", "High Push Ups"]
     let backExcercises = ["Pull Ups", "Wide Push Ups", "Shoulder Press"]
     let legsExcercises = ["Squad", "Lunges", "Jumps"]
-    let absExcercises = ["Leg Raise", "Abs Crunch", "Plank"]
+    let absExcercises = ["Leg Raise", "Crunch", "Plank"]
     let bicepExcercises = ["Pull Ups", "Dumbbell", "Bar Lifting"]
-    let tricepExcercises = ["Diamond Push Ups", "Tricep Push Ups", "Dumbbell"]
+    let tricepExcercises = ["Diamond Push Ups", "Push Ups", "Dumbbell"]
     
     
     
@@ -74,6 +99,7 @@ class ExcerciseVC: UIViewController {
         btn2.setTitle(button2Type, for: .normal)
         btn3.setTitle(button3Type, for: .normal)
         
+        excerciseSelected = false
         btn1.setDeselected()
         btn2.setDeselected()
         btn3.setDeselected()
