@@ -17,6 +17,12 @@ func URL(forApiKey key: String, withTag tag: String) -> String {
     return url
 }
 
+let chestExcercises = ["Push Ups", "Front Lifting", "High Push Ups"]
+let backExcercises = ["Pull Ups", "Wide Push Ups", "Shoulder Press"]
+let legsExcercises = ["Squad", "Lunges", "Jumps"]
+let absExcercises = ["Leg Raise", "Crunch", "Plank"]
+let bicepExcercises = ["Pull Ups", "Dumbbell", "Bar Lifting"]
+let tricepExcercises = ["Diamond Push Ups", "Push Ups", "Dumbbell"]
 
 
 

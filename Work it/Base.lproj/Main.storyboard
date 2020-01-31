@@ -15,20 +15,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="30" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YRj-dQ-fzf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="82" estimatedRowHeight="-1" sectionHeaderHeight="30" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YRj-dQ-fzf">
                                 <rect key="frame" x="0.0" y="226.5" width="414" height="635.5"/>
                                 <color key="backgroundColor" red="0.81636881829999997" green="0.72512602159999995" blue="0.13327400380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.81636881829999997" green="0.72512602159999995" blue="0.13327400380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TypeCell" rowHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="3hB-I8-5wu" customClass="TypeCell" customModule="Work_it" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TypeCell" rowHeight="82" translatesAutoresizingMaskIntoConstraints="NO" id="3hB-I8-5wu" customClass="TypeCell" customModule="Work_it" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3hB-I8-5wu" id="VMl-5G-DXU">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chest!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGu-dD-JbG" customClass="RoundedLabel" customModule="Work_it" customModuleProvider="target">
-                                                    <rect key="frame" x="28" y="13" width="358" height="82"/>
+                                                    <rect key="frame" x="28" y="13" width="358" height="64"/>
                                                     <color key="backgroundColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="58"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,13 +91,245 @@
                     <view key="view" contentMode="scaleToFill" id="abl-Re-BXk" customClass="Challe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="ZyO-fF-jBp">
+                                <rect key="frame" x="32" y="157.5" width="350" height="280"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="PJO-DQ-tOa">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAg-jw-nwf" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="KJc-lv-3Pf"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="s3Y-fg-Bbx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="32"/>
+                                                <state key="normal" title="Chest">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btn1WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="0wH-bk-Lq4"/>
+                                                    <action selector="chestBtnPressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="5PI-c9-6pA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc4-M3-AF5" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="150" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="cXT-tq-jgR"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="fp5-ZJ-r4h"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="32"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backBtnPressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="P23-Yt-nDJ"/>
+                                                    <action selector="btn1WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="8GQ-La-yJ3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="631-2L-sqa">
+                                        <rect key="frame" x="0.0" y="105" width="350" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTR-px-HyK" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="F09-9k-rR5"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="RrX-l7-02J"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="32"/>
+                                                <state key="normal" title="Bicep">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="bicepBtnPressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="RbD-C4-FCF"/>
+                                                    <action selector="btn1WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="PIE-qf-jJK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ih-Xd-22O" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="150" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="0wf-m7-Wbk"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="sbe-Nw-0wW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="32"/>
+                                                <state key="normal" title="Tricep">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btn1WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="1ah-pY-WRN"/>
+                                                    <action selector="tricepBtnPressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="gUP-Np-tsm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-Gi-Me5">
+                                        <rect key="frame" x="0.0" y="210" width="350" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4M-tZ-jsE" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Tak-CL-5CW"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="hIp-ja-KdU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="32"/>
+                                                <state key="normal" title="Legs">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btn1WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="YwZ-td-Wy2"/>
+                                                    <action selector="legsBtnPressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="tnK-Ga-xO8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPS-Gp-Nwr" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="150" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cGP-aS-Wws"/>
+                                                    <constraint firstAttribute="height" constant="70" id="fKg-S6-alb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="32"/>
+                                                <state key="normal" title="Abs">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="absBtnPressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="cJF-nS-v0E"/>
+                                                    <action selector="btn1WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="Fdr-oq-JfR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCg-5h-htl" customClass="RoundedLabel" customModule="Work_it" customModuleProvider="target">
+                                <rect key="frame" x="87" y="64" width="240" height="73.5"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="uGf-Q9-uCc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="58"/>
+                                <color key="textColor" red="0.81636881829999997" green="0.72512602159999995" blue="0.13327400380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3W5-et-sg7">
+                                <rect key="frame" x="20" y="487.5" width="374" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vic-2w-6TE" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="tdI-Qz-YAe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="32"/>
+                                        <state key="normal" title="Push Ups">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn1Pressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="Gki-n5-dKA"/>
+                                            <action selector="btn1WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="g8T-ZT-PTC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-9d-YB4" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                        <rect key="frame" x="126.5" y="0.0" width="121" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="aai-QT-Ynx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
+                                        <state key="normal" title="Front Lifting">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn2Pressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="dEu-og-SWR"/>
+                                            <action selector="btn2WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="YHA-vy-Fca"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLc-4q-FZ6" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                        <rect key="frame" x="252.5" y="0.0" width="121.5" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="jmq-n2-MXQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="28"/>
+                                        <state key="normal" title="High Push Ups">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn3Pressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="6ct-08-neS"/>
+                                            <action selector="btn3WasPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="vQD-zm-MGr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-K5-lDS" customClass="RoundedButton" customModule="Work_it" customModuleProvider="target">
+                                <rect key="frame" x="100" y="627.5" width="214" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="214" id="Qsd-um-qL3"/>
+                                    <constraint firstAttribute="height" constant="70" id="xTu-8Y-qPi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="39"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmBtn:" destination="I9L-5j-srj" eventType="touchUpInside" id="I4Y-vz-PE8"/>
+                                    <action selector="confirmBtnPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="Ijw-ku-fiS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwz-jN-RVn">
+                                <rect key="frame" x="5" y="76" width="67" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="u2P-ye-UkZ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="back-1"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="EYY-h2-FXo" eventType="touchUpInside" id="ahv-in-27a"/>
+                                    <action selector="closeBtnPressed:" destination="I9L-5j-srj" eventType="touchUpInside" id="r0u-QW-8E1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3W5-et-sg7" firstAttribute="top" secondItem="ZyO-fF-jBp" secondAttribute="bottom" constant="50" id="2AS-ew-uas"/>
+                            <constraint firstAttribute="trailing" secondItem="3W5-et-sg7" secondAttribute="trailing" constant="20" id="4pW-Q4-Ttd"/>
+                            <constraint firstItem="ZyO-fF-jBp" firstAttribute="centerX" secondItem="abl-Re-BXk" secondAttribute="centerX" id="8b4-6N-asB"/>
+                            <constraint firstItem="uwz-jN-RVn" firstAttribute="centerY" secondItem="nCg-5h-htl" secondAttribute="centerY" id="FSm-sv-VC7"/>
+                            <constraint firstItem="bfg-K5-lDS" firstAttribute="top" secondItem="3W5-et-sg7" secondAttribute="bottom" constant="70" id="Kih-QU-Wr5"/>
+                            <constraint firstItem="nCg-5h-htl" firstAttribute="centerX" secondItem="abl-Re-BXk" secondAttribute="centerX" id="PTc-oo-Efv"/>
+                            <constraint firstItem="nCg-5h-htl" firstAttribute="leading" secondItem="uwz-jN-RVn" secondAttribute="trailing" constant="15" id="VuA-zc-HpL"/>
+                            <constraint firstItem="nCg-5h-htl" firstAttribute="top" secondItem="CQP-fL-XdG" secondAttribute="top" constant="20" id="YJX-3T-h3Q"/>
+                            <constraint firstItem="3W5-et-sg7" firstAttribute="leading" secondItem="abl-Re-BXk" secondAttribute="leading" constant="20" id="crI-jh-FeT"/>
+                            <constraint firstItem="bfg-K5-lDS" firstAttribute="centerX" secondItem="abl-Re-BXk" secondAttribute="centerX" id="o4J-ef-fAt"/>
+                            <constraint firstItem="ZyO-fF-jBp" firstAttribute="top" secondItem="nCg-5h-htl" secondAttribute="bottom" constant="20" id="wOe-1u-ajj"/>
+                            <constraint firstItem="3W5-et-sg7" firstAttribute="centerX" secondItem="abl-Re-BXk" secondAttribute="centerX" id="wmf-Yq-gs8"/>
+                            <constraint firstItem="uwz-jN-RVn" firstAttribute="leading" secondItem="CQP-fL-XdG" secondAttribute="leading" constant="5" id="x0L-Ly-xdW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CQP-fL-XdG"/>
                     </view>
+                    <connections>
+                        <outlet property="absBtn" destination="UPS-Gp-Nwr" id="9Ka-c6-cgf"/>
+                        <outlet property="backBtn" destination="Rc4-M3-AF5" id="nF9-kJ-cnV"/>
+                        <outlet property="bicepBtn" destination="FTR-px-HyK" id="PSR-j9-aks"/>
+                        <outlet property="btn1" destination="vic-2w-6TE" id="VLP-Sg-1Jr"/>
+                        <outlet property="btn2" destination="kmj-9d-YB4" id="e1g-IC-9T7"/>
+                        <outlet property="btn3" destination="wLc-4q-FZ6" id="cdi-Tr-A3P"/>
+                        <outlet property="chestBtn" destination="PAg-jw-nwf" id="5Tj-py-mhq"/>
+                        <outlet property="confirmBtn" destination="bfg-K5-lDS" id="6pR-ik-X7S"/>
+                        <outlet property="legsBtn" destination="J4M-tZ-jsE" id="T6h-vh-f5L"/>
+                        <outlet property="tricepBtn" destination="8ih-Xd-22O" id="Jmb-Yy-ucK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmf-ts-Ydc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="-560"/>
+            <point key="canvasLocation" x="856.52173913043487" y="-560.49107142857144"/>
         </scene>
         <!--ExcerciseVC-->
         <scene sceneID="EMr-lj-XVb">
@@ -247,6 +479,7 @@
                         <outlet property="btn1" destination="VRL-aq-hRP" id="aXs-nB-ltN"/>
                         <outlet property="btn2" destination="FkB-PS-1tw" id="lo1-gP-gEc"/>
                         <outlet property="btn3" destination="b1A-24-nGO" id="z9m-2e-Anz"/>
+                        <outlet property="confirmBtn" destination="9fl-ap-d5t" id="XAb-aE-ys3"/>
                         <outlet property="titleLbl" destination="D9e-Gw-jsJ" id="PsU-zG-tZQ"/>
                     </connections>
                 </viewController>

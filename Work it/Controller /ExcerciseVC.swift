@@ -15,12 +15,15 @@ class ExcerciseVC: UIViewController {
     @IBOutlet weak var btn1: RoundedButton!
     @IBOutlet weak var btn2: RoundedButton!
     @IBOutlet weak var btn3: RoundedButton!
+    @IBOutlet weak var confirmBtn: RoundedButton!
     
     // @IBACTION
     @IBAction func btn1WasPressed(_ sender: Any) {
         if Excercise.instance.typeOfExcercise == btn1.titleLabel?.text{
             btn1.setDeselected()
+            Excercise.instance.typeOfExcercise = "Challenge"
             excerciseSelected = false
+            confirmBtn.setTitle("Confirm", for: .normal)
         } else {
             let nameOfExcercise = btn1.titleLabel?.text
             Excercise.instance.typeOfExcercise = nameOfExcercise
@@ -28,13 +31,16 @@ class ExcerciseVC: UIViewController {
             btn2.setDeselected()
             btn3.setDeselected()
             
+            confirmBtn.setTitle(btn1.titleLabel?.text, for: .normal)
             excerciseSelected = true
         }
     }
     @IBAction func btn2WasPressed(_ sender: Any) {
         if Excercise.instance.typeOfExcercise == btn2.titleLabel?.text {
             btn2.setDeselected()
+            Excercise.instance.typeOfExcercise = "Challenge"
             excerciseSelected = false
+            confirmBtn.setTitle("Confirm", for: .normal)
         } else {
              let nameOfExcercise = btn2.titleLabel?.text
              Excercise.instance.typeOfExcercise = nameOfExcercise
@@ -42,13 +48,16 @@ class ExcerciseVC: UIViewController {
              btn2.setSelected()
              btn3.setDeselected()
              
+            confirmBtn.setTitle(btn2.titleLabel?.text, for: .normal)
              excerciseSelected = true
         }
     }
     @IBAction func btn3WasPressed(_ sender: Any) {
         if Excercise.instance.typeOfExcercise == btn3.titleLabel?.text {
             btn3.setDeselected()
+            Excercise.instance.typeOfExcercise = "Challenge"
             excerciseSelected = false
+            confirmBtn.setTitle("Confirm", for: .normal)
         } else {
             let nameOfExcercise = btn3.titleLabel?.text
             Excercise.instance.typeOfExcercise = nameOfExcercise
@@ -56,6 +65,7 @@ class ExcerciseVC: UIViewController {
             btn2.setDeselected()
             btn3.setSelected()
             
+            confirmBtn.setTitle(btn3.titleLabel?.text, for: .normal)
             excerciseSelected = true
         }
     }
@@ -64,6 +74,7 @@ class ExcerciseVC: UIViewController {
     }
     @IBAction func confirmBtnPressed(_ sender: Any) {
         if excerciseSelected == false {
+            Muscle.instance.title = "Challenge"
             guard let challengeVC = storyboard?.instantiateViewController(identifier: "ChallengeVC") as? ChallengeVC else { return }
             present(challengeVC, animated: true, completion: nil)
         } else {
@@ -82,14 +93,7 @@ class ExcerciseVC: UIViewController {
     var button1Type: String = ""
     var button2Type: String = ""
     var button3Type: String = ""
-    let chestExcercises = ["Push Ups", "Front Lifting", "High Push Ups"]
-    let backExcercises = ["Pull Ups", "Wide Push Ups", "Shoulder Press"]
-    let legsExcercises = ["Squad", "Lunges", "Jumps"]
-    let absExcercises = ["Leg Raise", "Crunch", "Plank"]
-    let bicepExcercises = ["Pull Ups", "Dumbbell", "Bar Lifting"]
-    let tricepExcercises = ["Diamond Push Ups", "Push Ups", "Dumbbell"]
-    
-    
+
     
     // LIFECYCLES
     override func viewDidLoad() {
