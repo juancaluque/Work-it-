@@ -74,10 +74,14 @@ class ExcerciseVC: UIViewController {
     }
     @IBAction func confirmBtnPressed(_ sender: Any) {
         if excerciseSelected == false {
+            Challenge.instance.challengeStatus = true
+            
             Muscle.instance.title = "Challenge"
             guard let challengeVC = storyboard?.instantiateViewController(identifier: "ChallengeVC") as? ChallengeVC else { return }
             present(challengeVC, animated: true, completion: nil)
         } else {
+            Challenge.instance.challengeStatus = false
+            
             guard let generatorVC = storyboard?.instantiateViewController(identifier: "GeneratorVC") as? GeneratorVC else { return }
             
             generatorVC.initData(muscle: Muscle.instance.title!, excercise: Excercise.instance.typeOfExcercise)

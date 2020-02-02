@@ -18,19 +18,36 @@ class GeneratorVC: UIViewController {
     
     // @IBACTIONS
     @IBAction func generateBtnPressed(_ sender: Any) {
-        if muscle == "Chest" || muscle == "Legs" || excercise == "Leg Raise" || excercise == "Crunch" || excercise == "Dumbbell" || excercise == "Bar Lifting" {
-            let randNumber = Int.random(in: 10...25)
-            self.resultLabel.text = "Reps: \(randNumber)"
-        } else if excercise == "Pull Ups" || excercise == "Wide Push Ups" || excercise == "Diamond Push Ups" || excercise == "Push Ups" {
-            let randNumber = Int.random(in: 7...15)
-            self.resultLabel.text = "Reps: \(randNumber)"
-        } else if excercise == "Shoulder Press" {
-            let randNumber = Int.random(in: 3...7)
-            self.resultLabel.text = "Reps: \(randNumber)"
-        } else if excercise == "Plank" {
-            let randNumber = Int.random(in: 30...120)
-            self.resultLabel.text = "Reps: \(randNumber)"
+        if Challenge.instance.challengeStatus != true {
+            if muscle == "Chest" || muscle == "Legs" || excercise == "Leg Raise" || excercise == "Crunch" || excercise == "Dumbbell" || excercise == "Bar Lifting" {
+                let randNumber = Int.random(in: 10...25)
+                self.resultLabel.text = "Reps: \(randNumber)"
+            } else if excercise == "Pull Ups" || excercise == "Wide Push Ups" || excercise == "Diamond Push Ups" || excercise == "Push Ups" {
+                let randNumber = Int.random(in: 7...15)
+                self.resultLabel.text = "Reps: \(randNumber)"
+            } else if excercise == "Shoulder Press" {
+                let randNumber = Int.random(in: 3...7)
+                self.resultLabel.text = "Reps: \(randNumber)"
+            } else if excercise == "Plank" {
+                let randNumber = Int.random(in: 30...120)
+                self.resultLabel.text = "Reps: \(randNumber)"
+            }
+        } else {
+            if muscle == "Chest" || muscle == "Legs" || excercise == "Leg Raise" || excercise == "Crunch" || excercise == "Dumbbell" || excercise == "Bar Lifting" {
+                let randNumber = Int.random(in: 5...15)
+                self.resultLabel.text = "Reps: \(randNumber)"
+            } else if excercise == "Pull Ups" || excercise == "Wide Push Ups" || excercise == "Diamond Push Ups" || excercise == "Push Ups" {
+                let randNumber = Int.random(in: 4...12)
+                self.resultLabel.text = "Reps: \(randNumber)"
+            } else if excercise == "Shoulder Press" {
+                let randNumber = Int.random(in: 3...5)
+                self.resultLabel.text = "Reps: \(randNumber)"
+            } else if excercise == "Plank" {
+                let randNumber = Int.random(in: 30...90)
+                self.resultLabel.text = "Reps: \(randNumber)"
+            }
         }
+        
     }
     // VARIABLES
     var titleOfLabel: String? = ""

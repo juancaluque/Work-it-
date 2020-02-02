@@ -21,6 +21,7 @@
 		A44A08A923DBFC4C00222C33 /* workOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A08A823DBFC4C00222C33 /* workOut.swift */; };
 		A44A08AD23DC042600222C33 /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A08AC23DC042600222C33 /* RoundedLabel.swift */; };
 		A44A08AF23DC04EC00222C33 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A08AE23DC04EC00222C33 /* RoundedButton.swift */; };
+		A47EB0D423E662EE00F44399 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47EB0D323E662EE00F44399 /* Challenge.swift */; };
 		A4940F1823E3B985009AFF74 /* ChallengeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4940F1723E3B985009AFF74 /* ChallengeVC.swift */; };
 		A4AA6EAC23DCA1820096D1AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA6EAB23DCA1820096D1AB /* Constants.swift */; };
 		A4AA6EB123DCAE8F0096D1AB /* RoundedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA6EB023DCAE8F0096D1AB /* RoundedText.swift */; };
@@ -48,6 +49,7 @@
 		A44A08A823DBFC4C00222C33 /* workOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workOut.swift; sourceTree = "<group>"; };
 		A44A08AC23DC042600222C33 /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
 		A44A08AE23DC04EC00222C33 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		A47EB0D323E662EE00F44399 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		A4940F1723E3B985009AFF74 /* ChallengeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeVC.swift; sourceTree = "<group>"; };
 		A4AA6EAB23DCA1820096D1AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A4AA6EB023DCAE8F0096D1AB /* RoundedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedText.swift; sourceTree = "<group>"; };
@@ -112,8 +114,8 @@
 			children = (
 				A4AA6EB223DCB17C0096D1AB /* WorkOutVC.swift */,
 				A4AA6EB423DCB3B90096D1AB /* ExcerciseVC.swift */,
-				A43F71AD23DE59AA00B09095 /* GeneratorVC.swift */,
 				A4940F1723E3B985009AFF74 /* ChallengeVC.swift */,
+				A43F71AD23DE59AA00B09095 /* GeneratorVC.swift */,
 			);
 			path = "Controller ";
 			sourceTree = "<group>";
@@ -136,6 +138,7 @@
 				A44A08A823DBFC4C00222C33 /* workOut.swift */,
 				A43F71AB23DE574C00B09095 /* Excercise.swift */,
 				A43F71AF23DE5D5A00B09095 /* Muscle.swift */,
+				A47EB0D323E662EE00F44399 /* Challenge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				A44A08AD23DC042600222C33 /* RoundedLabel.swift in Sources */,
 				A44A089023DBF83600222C33 /* AppDelegate.swift in Sources */,
 				A4940F1823E3B985009AFF74 /* ChallengeVC.swift in Sources */,
+				A47EB0D423E662EE00F44399 /* Challenge.swift in Sources */,
 				A4AA6EB523DCB3B90096D1AB /* ExcerciseVC.swift in Sources */,
 				A4AA6EB123DCAE8F0096D1AB /* RoundedText.swift in Sources */,
 				A4AA6EB723DCF3920096D1AB /* ExcerciseType.swift in Sources */,
